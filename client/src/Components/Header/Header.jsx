@@ -46,6 +46,7 @@ const CustomButtonWrapper = styled('span')(({ theme }) => ({
     }
 }));
 
+
 const Header = () => {
     const logoURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png';
     const subURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png';
@@ -63,7 +64,8 @@ const Header = () => {
     const list = () => (
         <Box style={{ width: 250 }} onClick={handleClose}>
             <List>
-                <listItem button>
+                {/* int listitem their was written button i have removed because it is not showing any effect*/}
+                <listItem > 
                     <CustomButtons />
                 </listItem>
             </List>

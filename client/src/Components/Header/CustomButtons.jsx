@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 
 import Profile from './Profile';
 import LoginDialog from '../Login/LoginDialog';
+import MenuItems from './MenuItems';
 
 const Container = styled(Link)(({ theme }) => ({
     display: 'flex',
@@ -34,10 +35,21 @@ const Wrapper = styled(Box)(({ theme }) => ({
             marginTop: 10
         }
     },
-    [theme.breakpoints.down('sm')]: {
-        display: 'block'
+    [theme.breakpoints.down('md')]: {
+        display: 'none'
     }
 }));
+
+const MenuWrapper = styled(Box)(({theme})=>({
+    marginLeft : '2px',
+    [theme.breakpoints.between('md', '3200')]: {
+        display: 'none'
+    },
+    [theme.breakpoints.down('md')]: {
+        display: 'block'
+    }
+    
+}))
 
 const LoginButton = styled(Button)(({ theme }) => ({
     color: '#2874f0',
@@ -46,6 +58,7 @@ const LoginButton = styled(Button)(({ theme }) => ({
     fontWeight: 600,
     borderRadius: 2,
     padding: '5px 40px',
+    marginLeft : '20px',    
     height: 32,
     boxShadow: 'none',
     [theme.breakpoints.down('sm')]: {
@@ -68,8 +81,11 @@ const CustomButtons = () => {
     }
 
     return (
+        <>
+
         <Wrapper>
-            {
+        
+        {
                 account ? <Profile account={account} setAccount={setAccount} /> :
                     <LoginButton variant="contained" onClick={() => openDialog()}>Login</LoginButton>
                 
@@ -84,7 +100,13 @@ const CustomButtons = () => {
                 <Typography style={{ marginLeft: 10 }}>Cart</Typography>
             </Container>
             <LoginDialog open={open} setOpen={setOpen} setAccount={setAccount} />
+      
         </Wrapper>
+        <MenuWrapper>
+            <MenuItems/>
+        </MenuWrapper>
+        </>
+
     )
 }
 
