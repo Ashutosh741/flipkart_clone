@@ -19,3 +19,9 @@ router.post('/payment', addPaymentGateway);
 router.post('/callback', paymentResponse);
 
 export default router;
+
+// server package.json changes
+//  // "start": "node server.js" , 
+    // "client-install" : "cd client && npm install",
+    // "client-build" : "cd client && npm run build",
+    // "heroku-postbuild" : "npm run client-install && npm run client-build"
