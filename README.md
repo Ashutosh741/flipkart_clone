@@ -13,3 +13,13 @@
 ![Screenshot](snapshot/shot6.png)
 
 ![Screenshot](snapshot/shot7.png)
+
+![Screenshot](snapshot/r1.png)
+
+![Screenshot](snapshot/r2.png)
+
+![Screenshot](snapshot/r3.png)
+
+![Screenshot](snapshot/r4.png)
+
+
